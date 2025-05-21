@@ -1,8 +1,16 @@
 import { Message, TextChannel, NewsChannel } from 'discord.js';
+import removeMd from 'remove-markdown';
 import { client } from '../bot/bot';
 import { logger } from '../config/logger';
 import type { DiscordMessage } from '../interfaces';
 import { setMessagesCached, getMessagesCached } from '../config/cache';
+
+/**
+ * Cleans Discord user mentions (<@12341234>) from message content
+ */
+const cleanUserMentions = (content: string): string => {
+  return content.replace(/<@\d+>/g, '');
+};
 
 export interface DiscordService {
   getChannelMessages(): Promise<DiscordMessage[]>;
@@ -59,7 +67,7 @@ export const createDiscordService = (): DiscordService => {
 
             messages.push({
               id: message.id,
-              content: message.content,
+              content: removeMd(cleanUserMentions(message.content)),
               author: message.author.username,
               createdAt: message.createdAt,
               attachments,

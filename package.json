@@ -33,6 +33,7 @@
     "loglevel": "^1.9.2",
     "pino": "^9.7.0",
     "pino-pretty": "^13.0.0",
+    "remove-markdown": "^0.6.2",
     "telegram-scraper": "^1.0.2"
   }
 }
