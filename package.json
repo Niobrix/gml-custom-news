@@ -1,0 +1,38 @@
+{
+  "name": "gml-custom-news",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "lint": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "author": "Niobrix",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "cache-manager": "^6.4.3",
+    "cacheable": "^1.9.0",
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.3.3",
+    "keyv-file": "^5.1.2",
+    "loglevel": "^1.9.2",
+    "pino": "^9.7.0",
+    "pino-pretty": "^13.0.0"
+  }
+}
