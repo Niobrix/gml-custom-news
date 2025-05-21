@@ -17,10 +17,10 @@ const transformToNewsMessages = (
   messages: Array<{ content: string; createdAt: Date }>
 ): NewsMessage[] => {
   return messages.map((message) => {
-    const [Title, Description] = splitFirstLine(message.content);
+    const [Title, Content] = splitFirstLine(message.content);
     return {
       Title,
-      Description,
+      Content,
       СreatedAt: message.createdAt,
     };
   });
