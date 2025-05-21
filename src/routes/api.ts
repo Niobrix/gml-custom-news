@@ -14,14 +14,15 @@ const splitFirstLine = (text: string): [string, string] => {
 };
 
 const transformToNewsMessages = (
-  messages: Array<{ content: string; createdAt: Date }>
+  messages: Array<{ id: string; content: string; createdAt: Date }>
 ): NewsMessage[] => {
   return messages.map((message) => {
-    const [Title, Content] = splitFirstLine(message.content);
+    const [title, description] = splitFirstLine(message.content);
     return {
-      Title,
-      Content,
-      СreatedAt: message.createdAt,
+      id: Number(message.id),
+      title,
+      description,
+      createdAt: message.createdAt,
     };
   });
 };

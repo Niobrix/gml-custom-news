@@ -1,5 +1,6 @@
 export interface NewsMessage {
-  Title: string;
-  Content: string;
-  СreatedAt: Date;
+  id: number;
+  title: string;
+  description: string;
+  createdAt: Date;
 }
