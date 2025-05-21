@@ -1,9 +1,7 @@
 import pino from 'pino';
 
-// Determine log level from environment or use default
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 
-// Configure logger based on environment
 export const loggerConfig = {
   level: LOG_LEVEL,
   transport:
@@ -21,17 +19,14 @@ export const loggerConfig = {
             hideObject: false,
           },
         },
-  // Add service name for better identification in logs
   base: {
-    service: 'gml-discord-news',
+    service: 'gml-custom-news',
     env: process.env.NODE_ENV || 'development',
   },
 };
 
-// Create logger instance
 export const logger = pino(loggerConfig);
 
-// Export convenience methods for use throughout the application
 export const logError = (message: string, error: Error | unknown): void => {
   if (error instanceof Error) {
     logger.error({ err: error }, message);

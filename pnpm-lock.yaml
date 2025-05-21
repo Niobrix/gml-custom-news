@@ -38,6 +38,9 @@ importers:
       pino-pretty:
         specifier: ^13.0.0
         version: 13.0.0
+      telegram-scraper:
+        specifier: ^1.0.2
+        version: 1.0.2
     devDependencies:
       '@types/node':
         specifier: ^22.15.21
@@ -1052,6 +1055,9 @@ packages:
   synckit@0.11.6:
     resolution: {integrity: sha512-2pR2ubZSV64f/vqm9eLPz/KOvR9Dm+Co/5ChLgeHl0yEDRc6h5hXHoxEQH8Y5Ljycozd3p1k5TTSVdzYGkPvLw==}
     engines: {node: ^14.18.0 || >=16.0.0}
+
+  telegram-scraper@1.0.2:
+    resolution: {integrity: sha512-zgFKIC1RYtP8Zs7s7Optf5copF20Vy43gzZ+siTpaXO6+UD7V1R11fcb5wH3fVLT7pByL7dDmtzPlEQkL4XZPw==}
 
   thread-stream@3.1.0:
     resolution: {integrity: sha512-OqyPZ9u96VohAyMfJykzmivOrY2wfMSf3C5TtFJVgN+Hm6aj+voFhlK+kZEIv2FBh1X6Xp3DlnCOfEQ3B2J86A==}
@@ -2139,6 +2145,8 @@ snapshots:
   synckit@0.11.6:
     dependencies:
       '@pkgr/core': 0.2.4
+
+  telegram-scraper@1.0.2: {}
 
   thread-stream@3.1.0:
     dependencies:
