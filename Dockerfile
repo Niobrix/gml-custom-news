@@ -8,7 +8,7 @@ RUN npm install -g pnpm && pnpm install --frozen-lockfile
 
 COPY . .
 
-RUN pnpm build
+RUN rm -rf dist && pnpm build
 
 EXPOSE ${PORT:-3000}
 

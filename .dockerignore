@@ -1,11 +1,1 @@
 node_modules
-npm-debug.log
-dist
-.git
-.github
-.vscode
-*.md
-.gitignore
-.DS_Store
-# Keep .env file for local development
-# .env 
