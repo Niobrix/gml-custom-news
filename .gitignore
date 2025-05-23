@@ -23,4 +23,7 @@ dist/
 .DS_Store
 Thumbs.db 
 
+# Update script backups
+.backup/
+
 cache.json
